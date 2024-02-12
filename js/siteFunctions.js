@@ -116,10 +116,10 @@ function isiNilaiDefault(){
 	document.getElementById(allElem.kwTextRegId.id).innerText = "0000-0000-0000-0000";
 	document.getElementById(allElem.kwTextNpwp.id).innerText = "0000-0000-0000-0000";
 	document.getElementById(allElem.kwTextJenisZakat.id).innerText = "Mal";
-	document.getElementById(allElem.kwTextJenisProgram.id).innerText = "1.000.000";
+	document.getElementById(allElem.kwTextJenisProgram.id).innerText = "Program";
 	document.getElementById(allElem.kwTextJumlahZakat.id).innerText = "1.000.000";
 	document.getElementById(allElem.kwTextJumlahSedekah.id).innerText = "1.000.000";
-	document.getElementById(allElem.kwTextJumlahLainnya.id).innerText = "Lainnya";
+	document.getElementById(allElem.kwTextJumlahLainnya.id).innerText = "1.000.000";
 	document.getElementById(allElem.kwTextJumlahTotal.id).innerText = "1.000.000";
 	document.getElementById(allElem.kwTextTerbilang.id).innerText = "Satu Juta Rupiah";
 	document.getElementById(allElem.kwTextPenerima.id).innerText = "Penerima";
