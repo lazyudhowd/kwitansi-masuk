@@ -1,0 +1,46 @@
+body {
+	margin: auto;
+}
+
+.kwHeader {
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 24pt;
+    font-weight: bold;
+    margin-bottom: 16px;
+    background-color: darkorange;
+    padding: 12px 0px;
+}
+
+.kwContentArea{
+	margin: auto;
+}
+
+.laz-valign-middle {
+	vertical-align: middle;
+}
+
+#buttonArea{
+	margin-top: 12px;
+	text-align: center;
+}
+
+#buttonArea button{
+    padding: 6px 20px;
+    border-radius: 4px;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-family: 'Roboto';
+}
+
+#footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0px;
+    margin-top: 16px;
+    font-size: 8pt;
+    font-family: 'Roboto';
+}
