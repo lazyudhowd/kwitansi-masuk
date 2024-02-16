@@ -90,6 +90,10 @@ function generateKwitansi(){
 	targetText.appendChild(penyetorKwitansi);
 }
 
+function splitter4letter(eValue){
+	return eValue.match(/.{1,4}/g).join("-");
+}
+
 function printArea(){
 	let targetAreaSurvey = document.getElementById("target");
 
@@ -116,10 +120,10 @@ function isiNilaiDefault(){
 	document.getElementById(allElem.kwTextRegId.id).innerText = "0000-0000-0000-0000";
 	document.getElementById(allElem.kwTextNpwp.id).innerText = "0000-0000-0000-0000";
 	document.getElementById(allElem.kwTextJenisZakat.id).innerText = "Mal";
-	document.getElementById(allElem.kwTextJenisProgram.id).innerText = "Program";
+	document.getElementById(allElem.kwTextJenisProgram.id).innerText = "1.000.000";
 	document.getElementById(allElem.kwTextJumlahZakat.id).innerText = "1.000.000";
 	document.getElementById(allElem.kwTextJumlahSedekah.id).innerText = "1.000.000";
-	document.getElementById(allElem.kwTextJumlahLainnya.id).innerText = "1.000.000";
+	document.getElementById(allElem.kwTextJumlahLainnya.id).innerText = "Lainnya";
 	document.getElementById(allElem.kwTextJumlahTotal.id).innerText = "1.000.000";
 	document.getElementById(allElem.kwTextTerbilang.id).innerText = "Satu Juta Rupiah";
 	document.getElementById(allElem.kwTextPenerima.id).innerText = "Penerima";
@@ -188,7 +192,7 @@ function updateKwitansi(){
 
 	// untuk tanggal, kita ubah dari yang - menjadi /
 	if(urlParams.get('tglkw')){
-		let valueTanggal = urlParams.get('tglkw').replaceAll("-","/");
+		let valueTanggal = urlParams.get('tglkw').replaceAll("-"," / ");
 		
 		document.getElementById(allElem.kwTextTanggal.id).innerText = valueTanggal;
 	}
@@ -202,19 +206,19 @@ function updateKwitansi(){
 	}
 
 	if(urlParams.get('telp')){
-		document.getElementById(allElem.kwTextTelepon.id).innerText = urlParams.get('telp');
+		document.getElementById(allElem.kwTextTelepon.id).innerText = splitter4letter(urlParams.get('telp'));
 	}
 
 	if(urlParams.get('hp')){
-		document.getElementById(allElem.kwTextHp.id).innerText = urlParams.get('hp');
+		document.getElementById(allElem.kwTextHp.id).innerText = splitter4letter(urlParams.get('hp'));
 	}
 
 	if(urlParams.get('regid')){
-		document.getElementById(allElem.kwTextRegId.id).innerText = urlParams.get('regid');
+		document.getElementById(allElem.kwTextRegId.id).innerText = splitter4letter(urlParams.get('regid'));
 	}
 
 	if(urlParams.get('npwp')){
-		document.getElementById(allElem.kwTextNpwp.id).innerText = urlParams.get('npwp');
+		document.getElementById(allElem.kwTextNpwp.id).innerText = splitter4letter(urlParams.get('npwp'));
 	}
 
 	if(urlParams.get('jeniszakat')){
@@ -268,4 +272,3 @@ function updateKwitansi(){
 	showHideCorrectionNpwp();
 	showHideCorrectionRegid();
 }
-
