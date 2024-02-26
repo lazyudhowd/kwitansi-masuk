@@ -20,6 +20,27 @@ body {
 	vertical-align: middle;
 }
 
+.ttd {
+    margin-top: 28px;
+}
+
+#modalTandaTangan {
+    text-align: center;
+    font-family: sans-serif;
+    padding: 25px;
+}
+
+#modalTandaTangan div select {
+    width: 65%;
+    margin-top: 8px;
+}
+
+#modalMelalui {
+    text-align: center;
+    font-family: sans-serif;
+    line-height: 1.5em;
+}
+
 #buttonArea{
 	margin-top: 12px;
 	text-align: center;
