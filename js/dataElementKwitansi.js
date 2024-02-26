@@ -395,7 +395,7 @@ let allElem = {
 			x : 403,
 			y : 460
 		},
-		imageBlob : ttdPenerima,
+		imageBlob : ttdPakKhusnul,
 	},
 	svgCapLazismu : {
 		id : "svgCapLazismu",
@@ -408,4 +408,3 @@ let allElem = {
 		imageBlob : capLazismu,
 	}
 }
-
