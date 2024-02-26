@@ -16,7 +16,7 @@ function pageEventListener(){
 
 	document.getElementById("btnShowTandaTangan").addEventListener("click", showModalTandaTangan, false);
 
-	document.getElementById("selectForModalPenerima").addEventListener("change", changeTandaTanganPenerima, false);
+	document.getElementById("selectForModalPenerima").addEventListener("click", changeTandaTanganPenerima, false);
 
-	document.getElementById("selectForModalPenyetor").addEventListener("change", changeTandaTanganPenyetor, false);
+	document.getElementById("selectForModalPenyetor").addEventListener("click", changeTandaTanganPenyetor, false);
 }
