@@ -110,24 +110,45 @@ function printArea(){
 }
 
 function isiNilaiDefault(){
-	document.getElementById(allElem.kwTextNomor.id).innerText = "INV-008908";
-	document.getElementById(allElem.kwTextWilayah.id).innerText = "KOTA SINGKAWANG";
-	document.getElementById(allElem.kwTextTanggal.id).innerText = "18 / 05 / 2018";
-	document.getElementById(allElem.kwTextAtasNama.id).innerText = "Atas Nama";
-	document.getElementById(allElem.kwTextAlamat.id).innerText = "Alamat";
-	document.getElementById(allElem.kwTextTelepon.id).innerText = "0000-0000-0000";
-	document.getElementById(allElem.kwTextHp.id).innerText = "0000-0000-0000";
-	document.getElementById(allElem.kwTextRegId.id).innerText = "0000-0000-0000-0000";
-	document.getElementById(allElem.kwTextNpwp.id).innerText = "0000-0000-0000-0000";
-	document.getElementById(allElem.kwTextJenisZakat.id).innerText = "Mal";
-	document.getElementById(allElem.kwTextJenisProgram.id).innerText = "1.000.000";
-	document.getElementById(allElem.kwTextJumlahZakat.id).innerText = "1.000.000";
-	document.getElementById(allElem.kwTextJumlahSedekah.id).innerText = "1.000.000";
-	document.getElementById(allElem.kwTextJumlahLainnya.id).innerText = "Lainnya";
-	document.getElementById(allElem.kwTextJumlahTotal.id).innerText = "1.000.000";
-	document.getElementById(allElem.kwTextTerbilang.id).innerText = "Satu Juta Rupiah";
-	document.getElementById(allElem.kwTextPenerima.id).innerText = "Penerima";
-	document.getElementById(allElem.kwTextPenyetor.id).innerText = "Penyetor";
+	// document.getElementById(allElem.kwTextNomor.id).innerText = "INV-008908";
+	// document.getElementById(allElem.kwTextWilayah.id).innerText = "KOTA SINGKAWANG";
+	// document.getElementById(allElem.kwTextTanggal.id).innerText = "18 / 05 / 2018";
+	// document.getElementById(allElem.kwTextAtasNama.id).innerText = "Atas Nama";
+	// document.getElementById(allElem.kwTextAlamat.id).innerText = "Alamat";
+	// document.getElementById(allElem.kwTextTelepon.id).innerText = "0000-0000-0000";
+	// document.getElementById(allElem.kwTextHp.id).innerText = "0000-0000-0000";
+	// document.getElementById(allElem.kwTextRegId.id).innerText = "0000-0000-0000-0000";
+	// document.getElementById(allElem.kwTextNpwp.id).innerText = "0000-0000-0000-0000";
+	// document.getElementById(allElem.kwTextJenisZakat.id).innerText = "Mal";
+	// document.getElementById(allElem.kwTextJenisProgram.id).innerText = "1.000.000";
+	// document.getElementById(allElem.kwTextJumlahZakat.id).innerText = "1.000.000";
+	// document.getElementById(allElem.kwTextJumlahSedekah.id).innerText = "1.000.000";
+	// document.getElementById(allElem.kwTextJumlahLainnya.id).innerText = "Lainnya";
+	// document.getElementById(allElem.kwTextJumlahTotal.id).innerText = "1.000.000";
+	// document.getElementById(allElem.kwTextTerbilang.id).innerText = "Satu Juta Rupiah";
+	// document.getElementById(allElem.kwTextPenerima.id).innerText = "Penerima";
+	// document.getElementById(allElem.kwTextPenyetor.id).innerText = "Penyetor";
+
+	// setValueIfEmpty(allElem.kwTextNomor.id, "INV-008908");
+
+	setValueIfEmpty(allElem.kwTextNomor.id, "INV-008908");
+	setValueIfEmpty(allElem.kwTextWilayah.id, "KOTA SINGKAWANG");
+	setValueIfEmpty(allElem.kwTextTanggal.id, "18 / 05 / 2018");
+	setValueIfEmpty(allElem.kwTextAtasNama.id, "Atas Nama");
+	setValueIfEmpty(allElem.kwTextAlamat.id, "Alamat");
+	setValueIfEmpty(allElem.kwTextTelepon.id, "0000-0000-0000");
+	setValueIfEmpty(allElem.kwTextHp.id, "0000-0000-0000");
+	setValueIfEmpty(allElem.kwTextRegId.id, "0000-0000-0000-0000");
+	setValueIfEmpty(allElem.kwTextNpwp.id, "0000-0000-0000-0000");
+	setValueIfEmpty(allElem.kwTextJenisZakat.id, "Mal");
+	setValueIfEmpty(allElem.kwTextJenisProgram.id, "1.000.000");
+	setValueIfEmpty(allElem.kwTextJumlahZakat.id, "1.000.000");
+	setValueIfEmpty(allElem.kwTextJumlahSedekah.id, "1.000.000");
+	setValueIfEmpty(allElem.kwTextJumlahLainnya.id, "Lainnya");
+	setValueIfEmpty(allElem.kwTextJumlahTotal.id, "1.000.000");
+	setValueIfEmpty(allElem.kwTextTerbilang.id, "Satu Juta Rupiah");
+	setValueIfEmpty(allElem.kwTextPenerima.id, "Penerima");
+	setValueIfEmpty(allElem.kwTextPenyetor.id, "Penyetor");
 
 	showHideCorrectionNpwp();
 	showHideCorrectionRegid();
@@ -364,5 +385,13 @@ function changeMelalui(){
 			console.log(elementRadio[ii].value);
 			document.getElementById(allElem.kwTextMelalui.id).style.top = (-346 + (elementRadio[ii].value * 16))
 		}
+	}
+}
+
+function setValueIfEmpty(fTarget, fValue){
+	let value = document.getElementById(fTarget).innerText;
+
+	if(value == ""){
+		document.getElementById(fTarget).innerText = fValue;
 	}
 }
