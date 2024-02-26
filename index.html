@@ -6,9 +6,13 @@
 		<link rel="stylesheet" href="css/font.css">
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css" />
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+
 		<title>Kwitansi Masuk Lazismu Singkawang</title>
 	</head>
 
@@ -23,7 +27,7 @@
 		<div id="buttonArea">
 			<button id="btnExport" type="button">
 				<span class="material-symbols-outlined laz-valign-middle">document_scanner</span>
-
+				
 				<span class="laz-valign-middle">Ekspor Gambar</span>
 			</button>
 
@@ -31,6 +35,57 @@
 				<span class="material-symbols-outlined laz-valign-middle">variable_insert</span>
 				<span class="laz-valign-middle">Isi Otomatis</span>
 			</button>
+
+			<button id="btnShowModalMelalui" type="button">
+				<span class="material-symbols-outlined laz-valign-middle">payments</span>
+				<span class="laz-valign-middle">Pilih "Melalui"</span>
+			</button>
+
+			<button id="btnShowTandaTangan" type="button">
+				<span class="material-symbols-outlined laz-valign-middle">signature</span>
+				<span class="laz-valign-middle">Ganti Penerima</span>
+			</button>
+		</div>
+
+		<div id="modal1" class="modal micromodal-slide">
+			<div class="modal__overlay">
+				<div class="modal__container">
+					<header class="modal__header">
+						<h2>Micromodal</h2>
+						<button class="modal__close"></button>
+					</header>
+					<main class="modal__content">
+						<input type="radio" id="radioKas" value="1" name="radioMelalui"><label for="radioKas">Kas</label>
+						<input type="radio" id="radioBank" value="2" name="radioMelalui"><label for="radioBank">Bank</label>
+						<input type="radio" id="radioWesel" value="3" name="radioMelalui"><label for="radioWesel">Wesel</label>
+					</main>
+					<footer>
+						<button class="modal__btn modal__btn-primary">Continue</button>
+						<button class="modal__btn">Close</button>
+					</footer>
+				</div>
+			</div>
+		</div>
+
+		<div id="modalMelalui" class="modal">
+			<h1>Pilih Metode Transfer</h1>
+			<div>
+				<input type="radio" id="radioKas1" value="1" name="radioMelalui1"><label for="radioKas1">Kas</label>
+				<input type="radio" id="radioBank1" value="2" name="radioMelalui1"><label for="radioBank1">Bank</label>
+				<input type="radio" id="radioWesel1" value="3" name="radioMelalui1"><label for="radioWesel1">Wesel</label>
+			</div>
+		</div>
+
+		<div id="modalTandaTangan" class="modal">
+			<div class="ttd">
+				<h2>Pilih Tanda Tangan Penerima Setoran</h2>
+				<div id="targetModalPenerima"></div>
+			</div>
+
+			<div class="ttd">
+				<h2>Pilih Tanda Tangan Penyetor</h2>
+				<div id="targetModalPenyetor"></div>
+			</div>
 		</div>
 
 		<div id="footer">
