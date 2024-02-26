@@ -272,3 +272,97 @@ function updateKwitansi(){
 	showHideCorrectionNpwp();
 	showHideCorrectionRegid();
 }
+
+// =================================== =================================== ===================================
+
+function showModalPenyetor(){
+	$('#modalPenyetor').modal();
+}
+
+function generateModalDaftarPenyetor(){
+	let target = document.getElementById("targetModalPenyetor");
+
+	let select = document.createElement("select");
+	select.id = "selectForModalPenyetor";
+
+	for(let ii = 0; ii<dataTandaTanganPenyetor.length; ii++){
+		let option = document.createElement("option");
+		option.value = ii;
+		option.text = dataTandaTanganPenyetor[ii].nama;
+		select.appendChild(option);
+	}
+
+	target.appendChild(select);
+}
+
+function changeTandaTanganPenyetor(){
+	let valueTandaTangan = document.getElementById("selectForModalPenyetor")
+
+	document.getElementById(allElem.svgTandaTanganPenyetor.id).setAttribute('href', dataTandaTanganPenyetor[parseInt(valueTandaTangan.value)].ttd);
+}
+
+// =================================== =================================== ===================================
+
+function showModalTandaTangan(){
+	$('#modalTandaTangan').modal();
+}
+
+function generateModalDaftarTandaTangan(){
+	let targetPenerima = document.getElementById("targetModalPenerima");
+
+	let selectPenerima = document.createElement("select");
+	selectPenerima.id = "selectForModalPenerima";
+
+	for(let ii = 0; ii<dataTandaTanganPenerima.length; ii++){
+		let option = document.createElement("option");
+		option.value = ii;
+		option.text = dataTandaTanganPenerima[ii].nama;
+		selectPenerima.appendChild(option);
+	}
+
+	let targetPenyetor = document.getElementById("targetModalPenyetor");
+
+	let selectPenyetor = document.createElement("select");
+	selectPenyetor.id = "selectForModalPenyetor";
+
+	for(let ii = 0; ii<dataTandaTanganPenyetor.length; ii++){
+		let option = document.createElement("option");
+		option.value = ii;
+		option.text = dataTandaTanganPenyetor[ii].nama;
+		selectPenyetor.appendChild(option);
+	}
+
+	targetPenerima.appendChild(selectPenerima);
+	targetPenyetor.appendChild(selectPenyetor);
+}
+
+function changeTandaTanganPenerima(){
+	let valueTandaTangan = document.getElementById("selectForModalPenerima")
+
+	document.getElementById(allElem.svgTandaTanganPenerima.id).setAttribute('href', dataTandaTanganPenerima[parseInt(valueTandaTangan.value)].ttd);
+}
+
+function changeTandaTanganPenyetor(){
+	let valueTandaTangan = document.getElementById("selectForModalPenyetor")
+
+	document.getElementById(allElem.svgTandaTanganPenyetor.id).setAttribute('href', dataTandaTanganPenyetor[parseInt(valueTandaTangan.value)].ttd);
+}
+
+// =================================== =================================== ===================================
+
+function showMelaluiModal(){
+	$('#modalMelalui').modal();
+}
+
+function changeMelalui(){
+	console.log("change melalui");
+
+	let elementRadio = document.getElementsByName("radioMelalui1");
+
+	for(let ii=0; ii<elementRadio.length; ii++){
+		if(elementRadio[ii].checked){
+			console.log(elementRadio[ii].value);
+			document.getElementById(allElem.kwTextMelalui.id).style.top = (-346 + (elementRadio[ii].value * 16))
+		}
+	}
+}
