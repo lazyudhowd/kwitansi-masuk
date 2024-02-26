@@ -7,4 +7,16 @@ function pageEventListener(){
 	document.getElementById(allElem.kwTextRegId.id).addEventListener("input", showHideCorrectionRegid, false);
 
 	document.getElementById(allElem.kwTextNpwp.id).addEventListener("input", showHideCorrectionNpwp, false);
+
+	document.getElementById("btnShowModalMelalui").addEventListener("click", showMelaluiModal, false);
+
+	document.getElementById("radioKas1").addEventListener("click", changeMelalui, false);
+	document.getElementById("radioBank1").addEventListener("click", changeMelalui, false);
+	document.getElementById("radioWesel1").addEventListener("click", changeMelalui, false);
+
+	document.getElementById("btnShowTandaTangan").addEventListener("click", showModalTandaTangan, false);
+
+	document.getElementById("selectForModalPenerima").addEventListener("change", changeTandaTanganPenerima, false);
+
+	document.getElementById("selectForModalPenyetor").addEventListener("change", changeTandaTanganPenyetor, false);
 }
